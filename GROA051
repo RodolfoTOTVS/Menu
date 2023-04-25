@@ -1,0 +1,21 @@
+Static Function MenuDef()
+	
+
+	Local aRotina := {}
+
+	aAdd(aRotina, {'Pesquisar',  'VIEWDEF.GROA051', 0, 1, 0, Nil})
+	aAdd(aRotina, {'Visualizar', 'VIEWDEF.GROA051', 0, 2, 0, Nil})
+	aAdd(aRotina, {'Inclusão',   'VIEWDEF.GROA051', 0, 3, 0, Nil})
+	aAdd(aRotina, {'Excluir',    'VIEWDEF.GROA051', 0, 5, 0, Nil})
+	aAdd(aRotina, {'Emite Nota Fiscal',     'FWMsgRun(, {|oSay| U_GRO051NF(oSay)}, "Aguarde", "Emitindo nota fiscal...")', 0, 4, 0, Nil})
+	aAdd(aRotina, {'Visualiza Nota Fiscal', 'U_GRO051VS', 0, 4, 0, Nil})
+
+/*
+	GROAMNU01 - Inclusão de opções no menu do Registro de Bloco.
+*/	
+
+	If ExistBlock("GROAMNU01")
+		aRotina := ExecBlock("GROAMNU01", .f., .f., { aRotina} )
+	EndIf
+
+Return aRotina
