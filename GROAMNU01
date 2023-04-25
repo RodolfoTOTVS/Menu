@@ -1,0 +1,12 @@
+
+User Function GROAMNU01
+    
+ 	Local aRotina := paramixb[1]
+
+  aAdd(aRotina, {'teste0000',  'VIEWDEF.GROA051', 0, 1, 0, Nil})
+	aAdd(aRotina, {'teste1', 'VIEWDEF.GROA051', 0, 2, 0, Nil})
+	aAdd(aRotina, {'teste2',   'VIEWDEF.GROA051', 0, 3, 0, Nil})
+	aAdd(aRotina, {'teste3',    'VIEWDEF.GROA051', 0, 5, 0, Nil})
+			
+
+Return aRotina 
